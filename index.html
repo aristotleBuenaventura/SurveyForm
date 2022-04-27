@@ -23,26 +23,45 @@
             </div>
         </div>
     
-        <div class="container mb-5" >
-            <div class="row justify-content-center" >
+        <div class="container mb-5 " >
+            <div class="row justify-content-center">
                 <div class="col col-8 border bg-light" style="z-index: 1;">
-                    <form id="survey-form">
-                        <div class="mt-5 mx-4">
+                    <form id="survey-form" class="needs-validation" novalidate name=forms>
+                        <div class="mt-5 mx-4 position-relative">
                           <label for="name" class="form-label h5">Name</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Enter your name" id="name" >
+                          <input type="text" class="form-control form-control-lg" placeholder="Enter your name" id="name" required >
+                          <div class="valid-tooltip position-static">
+                            Looks good!
+                          </div>
+                          <div class="invalid-tooltip position-static">
+                            Please enter your name.
+                          </div>
                         </div>
-                        <div class="mt-4 mx-4">
+                        
+                        <div class="mt-4 mx-4 position-relative">
                             <label for="email" class="form-label h5">Email</label>
-                            <input type="email" class="form-control form-control-lg" placeholder="Enter your Email" id="email" >
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your Email" id="email" required >
+                            <div class="valid-tooltip position-static">
+                                Looks good!
+                              </div>
+                            <div class="invalid-tooltip position-static">
+                                Please enter your email.
+                            </div>
                         </div>
-                        <div class="mt-4 mx-4">
+                        <div class="mt-4 mx-4 position-relative">
                             <label for="number" class="form-label h5">Age</label>
-                            <input type="text" class="form-control form-control-lg" placeholder="Age" id="number" >
+                            <input type="text" class="form-control form-control-lg" placeholder="Age" id="number" required>
+                            <div class="valid-tooltip position-static">
+                                Looks good!
+                              </div>
+                            <div class="invalid-tooltip position-static">
+                                Please enter your age.
+                            </div>
                         </div>
-                        <div class="mt-4 mx-4">
+                        <div class="mt-4 mx-4 position-relative">
                             <label for="dropdown" class="form-label h5">Which option best describes your current role?</label> 
-                            <select class="form-select form-select-lg " id="dropdown" aria-label=".form-select-lg example">
-                                <option selected>Select current role</option>
+                            <select class="form-select form-select-lg " id="dropdown" aria-label=".form-select-lg example" required >
+                                <option selected disabled value="" >Select current role</option>
                                 <option value="1">Teacher</option>
                                 <option value="2">Doctor</option>
                                 <option value="3">Attorney</option>
@@ -50,27 +69,33 @@
                                 <option value="5">Call Center Agent</option>
                                 <option value="6">Customer Service Specialist</option>
                                 <option value="7">Student</option>
-                              </select>
+                            </select>
+                            <div class="valid-tooltip position-static">
+                                Looks good!
+                              </div>
+                            <div class="invalid-tooltip position-static">
+                                Please select your current role.
+                            </div>
                         </div>
-                        <div class="mt-4 mx-4">
+                        <div class="mt-4 mx-4 position-relative">
                             <label for="dropdown" class="form-label h5">Are you a registered voter?</label> 
                             <div class="form-check mb-2 ms-1">
-                                <input class="form-check-input radio mt-2" type="radio" name="flexRadioDefault"  checked>
+                                <input class="form-check-input radio mt-2" type="radio" name="flexRadioDefault"  required>
                                 <label class="form-check-label text" for="flexRadioDefault1">
                                   Yes
                                 </label>
-                              </div>
-                              <div class="form-check ms-1">
-                                <input class="form-check-input radio mt-2" type="radio" name="flexRadioDefault"  >
+                            </div>
+                            <div class="form-check ms-1">
+                                <input class="form-check-input radio mt-2" type="radio" name="flexRadioDefault" required>
                                 <label class="form-check-label text" for="flexRadioDefault2">
-                                  No
+                                    No
                                 </label>
-                              </div>
+                            </div>
                         </div>
-                        <div class="mt-4 mx-4">
+                        <div class="mt-4 mx-4 position-relative">
                             <label for="president" class="form-label h5">Who will you vote for President?</label> 
-                            <select class="form-select form-select-lg " id="president" aria-label=".form-select-lg example">
-                                <option selected>Select your presidentiable</option>
+                            <select class="form-select form-select-lg " id="president" aria-label=".form-select-lg example" required>
+                                <option selected disabled value="">Select your presidentiable</option>
                                 <option value="1">Robredo</option>
                                 <option value="2">Marcos</option>
                                 <option value="3">Pacquiao</option>
@@ -78,150 +103,218 @@
                                 <option value="5">De guzman</option>
                                 <option value="6">Moreno</option>
                                 <option value="6">Undecided</option>
-                              </select>
+                            </select>
+                            <div class="valid-tooltip position-static">
+                                Looks good!
+                              </div>
+                            <div class="invalid-tooltip position-static">
+                                Please select one president.
+                            </div>
                         </div>
                         <div class="mt-4 mx-4">
                             <label for="vp" class="form-label h5">Who will you vote for Vice President?</label> 
-                            <select class="form-select form-select-lg " id="vp" aria-label=".form-select-lg example">
-                                <option selected>Select your vice presidentiable</option>
+                            <select class="form-select form-select-lg " id="vp" aria-label=".form-select-lg example" required>
+                                <option selected disabled value="">Select your vice presidentiable</option>
                                 <option value="1">Pangilinan</option>
                                 <option value="2">Duterte</option>
                                 <option value="3">Sotto</option>
                                 <option value="4">Ong</option>
                                 <option value="5">Undecided</option>
-                              </select>
+                            </select>
+                            <div class="valid-tooltip position-static">
+                                Looks good!
+                              </div>
+                            <div class="invalid-tooltip position-static">
+                                Please select one vice president.
+                            </div>
                         </div>
                         <div class="mt-4 mx-4">
-                            <label class="form-label h5">Select at most 12 senatorial candidates?</label> 
+                            <label class="form-label h5" >Select at most 12 senatorial candidates?</label>
+                            <p class="warning"></p> 
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(0)' > 
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Afuang
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(1)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Albani
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(2)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Balita
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(3)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Bautista
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(4)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Belgica
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(5)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Binay
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(6)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Cayetano
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(7)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Colmenares
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(8)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Diokno
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(9)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Eleazar
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(10)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Escudero
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(11)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Espiritu
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(12)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Estrada
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(13)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Lacson
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(14)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Hontiveros
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(15)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Gutoc
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(16)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Gordon
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(17)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Gatchalian
                                 </label>
                             </div>
                             <div class="form-check ms-1 text">
-                                <input class="form-check-input check" type="checkbox" value="" >
+                                <input class="form-check-input check" type="checkbox" value="" name=ckb onclick='chkcontrol(18)'>
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Panelo
                                 </label>
                             </div>
-                            <div class="mb-3 mt-4">
+                            <div class="mb-3 mt-4 position-relative">
                                 <label for="comment" class="form-label h5">Any comments or suggestions?</label>
-                                <textarea class="form-control h5" id="comment" rows="5" placeholder="Enter your comment here..."></textarea>
+                                <textarea class="form-control h5" id="comment" rows="5" placeholder="Enter your comment here..." required></textarea>
+                                <div class="valid-tooltip position-static">
+                                    Looks good!
+                                  </div>
+                                <div class="invalid-tooltip position-static">
+                                    Please select enter your feedback.
+                                </div>
                             </div>
+                            
                         </div>
                         <div class="mt-4 mx-4 d-grid gap-2 mb-5 ">
-                            <button type="button" class="btn btn-success py-3"><strong class="text">Submit</strong></button>
+                            <button type="submit" class="btn btn-success py-3"><strong class="text">Submit</strong></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <nav class="container-fluid bg-dark">
+            <div class="container ">
+                <div class="row">
+                    <div class="col col-12 text-light text-center mt-5 h5">
+                        Survey Form
+                    </div>
+                    <p class="col col-12 text-light text-center h5 mb-5 font-italic">
+                        For May 9 National Election
+                    </p>
+                </div>
+                
+            </div>
+        </nav>
 
-    
-    
+    <script type="text/javascript">
+        function chkcontrol(j) {
+            var total=0;
+            for(var i=0; i < document.forms.ckb.length; i++){
+                if(document.forms.ckb[i].checked){
+                    total =total +1;
+                }
+                if(total > 12){
+                    alert("Please Select at most 12 senators") 
+                    document.forms.ckb[j].checked = false ;
+                    return false;
+                }
+            }
+        } 
+    </script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
